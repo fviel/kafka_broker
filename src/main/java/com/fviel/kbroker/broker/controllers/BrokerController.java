@@ -11,10 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class BrokerController {
     private final KafkaTemplate<String, String> kafkaTemplate;
 
+
+
     public BrokerController(KafkaTemplate<String, String> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 
+
+    
     @GetMapping("/send")
     public String sendMessage(@RequestParam String message) {
         kafkaTemplate.send("fviel-topic", message);

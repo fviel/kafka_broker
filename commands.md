@@ -183,9 +183,11 @@ docker network inspect nwviel
 # Apache Kafka
 
 ## Access the kafka container
+```
 $ docker exec -it kafka bash
+```
 
 ## Send message to a topic 
+```
 $ kafka-console-producer --bootstrap-server localhost:9092 --topic fviel-topic
-
-## 
+```
