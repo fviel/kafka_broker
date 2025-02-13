@@ -19,7 +19,7 @@ public class BrokerController {
 
 
     
-    @GetMapping("/send")
+    @PostMapping("/send")
     public String sendMessage(@RequestParam String message) {
         kafkaTemplate.send("fviel-topic", message);
         return "Message sent for topic 'fviel-topic': " + message;

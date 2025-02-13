@@ -9,12 +9,12 @@ sleep 1
 
 echo "###############################################################"
 echo "### 2. Compilar"
-clear;mvn clean install -Dspring.profiles.active=dev
+clear;mvn clean install -DskipTests
 sleep 1
 
 echo "###############################################################"
 echo "### 3 Docker build da imagem"
-sudo docker build -t shorty-app:0.0.1 .
+sudo docker build -t kbroker:0.0.1 .
 sleep 1
 
 echo "###############################################################"
